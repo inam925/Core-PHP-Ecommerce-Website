@@ -1,0 +1,228 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  min-width: 100vw;
+  font-family: "Open Sans", sans-serif;
+  background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e);
+}
+a:hover,
+a:visited,
+a:link,
+a:active {
+  text-decoration: none;
+  color: white;
+}
+/* ------------ */
+.main {
+  width: 60vw;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: red;
+  overflow-y: scroll;
+  background-color: #24243e;
+  border-radius: 10px;
+  box-shadow: 5px 20px 50px #000;
+  padding: 10px 20px 10px 20px;
+}
+
+span {
+  color: #fff;
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+}
+small {
+  height: 4vh;
+  width: 50%;
+  color: white;
+  background-color: #4a3b76;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+h4 {
+  color: white;
+  font-size: 20px;
+  line-height: 30px;
+}
+#cartSubmit {
+  margin-left: 5px;
+  height: 5vh;
+  width: 100%;
+  color: white;
+  background-color: #4a3b76;
+  text-transform: uppercase;
+  border: 0;
+  border-radius: 0.3rem;
+  letter-spacing: 2px;
+}
+#cartSubmit:hover {
+  animation-name: btn-hov;
+  animation-duration: 550ms;
+  animation-fill-mode: forwards;
+}
+
+@keyframes btn-hov {
+  100% {
+    background-color: #cfc9e1;
+    color: #4a3b76;
+    transform: scale(1.05);
+  }
+}
+.left > .left-img > img {
+  width: 50%;
+}
+.left-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+.right {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  font-size: 20px;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+/* ---------------- */
+.quantity {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+.quantity__minus,
+.quantity__plus {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 3vw;
+  height: 5vh;
+  margin: 0;
+  background: #dee0ee;
+  text-decoration: none;
+  line-height: 23px;
+}
+.quantity__minus:hover,
+.quantity__plus:hover {
+  background: #575b71;
+  color: #fff;
+}
+.quantity__minus {
+  border-radius: 3px 0 0 3px;
+}
+.quantity__plus {
+  border-radius: 0 3px 3px 0;
+}
+.quantity__input {
+  width: 4vw;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  border-top: 2px solid #dee0ee;
+  border-bottom: 2px solid #dee0ee;
+  border-left: 1px solid #dee0ee;
+  border-right: 2px solid #dee0ee;
+  background: #fff;
+  color: #8184a1;
+}
+.quantity__minus:link,
+.quantity__plus:link {
+  color: #8184a1;
+}
+.quantity__minus:visited,
+.quantity__plus:visited {
+  color: #fff;
+}
+form {
+  display: flex;
+}
+/* ------------ */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+/* -------- */
+p {
+  color: white;
+  font-size: 15px;
+  line-height: 25px;
+}
+em {
+  color: white;
+  font-size: 15px;
+  line-height: 25px;
+}
+/* Responsive */
+@media screen and (max-width: 900px) {
+  .main {
+    overflow-y: scroll;
+  }
+  .right {
+    font-size: 15px;
+    line-height: 25px;
+  }
+  button {
+    height: 40px;
+  }
+}
+@media screen and (max-width: 1300px) {
+  .left > .left-img > img {
+    width: 25vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .right {
+    font-size: 12px;
+    line-height: 22px;
+  }
+  button {
+    height: 30px;
+  }
+  nav > .nav-a {
+    font-size: 12px !important;
+  }
+}
+@media screen and (max-width: 600px) {
+  .left > .left-img > img {
+    width: 60vw;
+  }
+  .left {
+    display: flex;
+    flex-direction: column;
+  }
+  .right {
+    width: 60vw;
+  }
+}
+@media screen and (max-width: 500px) {
+  nav > .nav-a {
+    font-size: 10px !important;
+  }
+}
+@media screen and (max-width: 420px) {
+  nav > .nav-a {
+    font-size: 8px !important;
+  }
+}

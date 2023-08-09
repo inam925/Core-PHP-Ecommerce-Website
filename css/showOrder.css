@@ -1,0 +1,245 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  min-width: 100vw;
+  font-family: "Open Sans", sans-serif;
+  background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e);
+}
+a:hover,
+a:visited,
+a:link,
+a:active {
+  text-decoration: none;
+  color: white;
+}
+/* ------------ */
+.main {
+  width: 60vw;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: red;
+  overflow: auto;
+  background-color: #24243e;
+  border-radius: 10px;
+  box-shadow: 5px 20px 50px #000;
+  padding: 10px 20px 10px 20px;
+}
+
+span {
+  color: #fff;
+  font-size: 19px;
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+}
+small {
+  height: 4vh;
+  width: 50%;
+  color: white;
+  background-color: #4a3b76;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+h4 {
+  color: white;
+  font-size: 20px;
+  line-height: 30px;
+}
+@keyframes btn-hov {
+  100% {
+    background-color: #cfc9e1;
+    color: #4a3b76;
+    transform: scale(1.05);
+  }
+}
+.left > .left-img > img {
+  width: 50%;
+}
+.left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.right {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  width: 80%;
+  font-size: 20px;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.product-img {
+  width: 30%;
+  height: 15vh;
+}
+.prod-item {
+  display: flex;
+}
+
+/* -------------- */
+.left > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+label {
+  color: white;
+  font-weight: 600;
+}
+.items {
+  display: flex;
+}
+/* ----------- */
+p {
+  color: white;
+  font-size: 15px;
+  line-height: 25px;
+}
+em {
+  color: white;
+  font-size: 15px;
+  line-height: 25px;
+}
+/* ------Items------ */
+.product {
+  width: 100%;
+  border-radius: 12px;
+}
+.product_body {
+  border-radius: 0 0 12px 12px;
+  height: 100px;
+  padding: 15px 15px 20px;
+  display: grid;
+  row-gap: 8px;
+}
+.product_content {
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr;
+  align-items: center;
+  padding: 10px 30px 10px 10px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 5px 7px -1px rgba(51, 51, 51, 0.23);
+  cursor: pointer;
+  transition: transform 0.25s cubic-bezier(0.7, 0.98, 0.86, 0.98),
+    box-shadow 0.25s cubic-bezier(0.7, 0.98, 0.86, 0.98);
+  background-color: #fff;
+}
+.product_picture {
+  max-width: 100%;
+  width: 60px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 10px #ebeef3, 0 0 0 22px #f3f4f6;
+}
+
+.product_name {
+  color: #979cb0;
+  font-weight: 600;
+  font-size: 20px;
+  letter-spacing: 0.64px;
+  margin-left: 12px;
+}
+
+.product_value {
+  color: #35d8ac;
+  font-weight: 700;
+  font-size: 30px;
+  text-align: right;
+}
+.right {
+  box-shadow: 0 0 40px -10px rgba(0, 0, 0, 0.4);
+}
+button {
+  width: 40%;
+  height: 40px;
+  min-height: 40px;
+  margin: 10px auto;
+  justify-content: center;
+  display: block;
+  color: #fff;
+  background: #573b8a;
+  font-size: 1em;
+  font-weight: bold;
+  margin-top: 20px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  transition: 0.2s ease-in;
+  cursor: pointer;
+}
+button:hover {
+  background: #6d44b8;
+}
+
+/* Responsive */
+@media screen and (max-width: 900px) {
+  .main {
+    overflow-y: scroll;
+  }
+  .right,
+  span {
+    font-size: 15px;
+    line-height: 25px;
+  }
+  button {
+    height: 40px;
+  }
+}
+@media screen and (max-width: 1300px) {
+  .left > .left-img > img {
+    width: 25vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .right {
+    font-size: 12px;
+    line-height: 22px;
+  }
+  button {
+    height: 30px;
+  }
+  nav > .nav-a {
+    font-size: 12px !important;
+  }
+  .product_name,
+  .product_value {
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .right {
+    width: 60vw;
+  }
+}
+@media screen and (max-width: 500px) {
+  nav > .nav-a {
+    font-size: 10px !important;
+  }
+}
+@media screen and (max-width: 420px) {
+  nav > .nav-a {
+    font-size: 8px !important;
+  }
+  .product_content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .product_picture {
+    max-width: 30px;
+  }
+  .product_name,
+  .product_value {
+    font-size: 13px;
+  }
+}
